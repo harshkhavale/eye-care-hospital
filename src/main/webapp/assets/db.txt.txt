@@ -1,0 +1,6 @@
+create database eyecarehospital;
+use eyecarehospital;
+create table users ( id int not null auto_increment primary key,email varchar(25) not null,username varchar(25) not null,password varchar(25) not null,usertype varchar(25) not null);
+create table doctors ( id int not null auto_increment primary key,name varchar(50) not null,category varchar(50) not null,description varchar(100) not null,contact varchar(50) not null,email varchar(50) not null,charge double not null,profile varchar(50) not null);
+create table appointment ( id int not null auto_increment primary key,patientname varchar(50) not null,doctorId int not null ,userId int not null ,address varchar(50) not null,date varchar(50) not null,time varchar(50) not null,payment varchar(50) not null);
+insert into eyecarehospital.users values(1,"eyecarehospital@gmail.com","admin","admin","ADMIN");
